@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: "Arial";
+  background-color: #fdfdfd;
+  color: #333;
+  text-align: center;
+}
+
+h1 {font-family: "Garamond", cursive;
+}
+h3{font-family:"Garamond", cursive;}
+
+header {
+  background: #27DDF5;
+  color: white;
+  padding: 1.5rem;
+}
+
+.carousel {
+  position: relative;
+  height: 750px;        /* Adjust for your preferred height */
+  overflow: hidden;
+  background: #000;     /* Optional: black background behind images */
+}
+
+.carousel-image {
+  position: absolute;
+  top: 50%;             /* Start at the vertical center */
+  left: 50%;            /* Start at the horizontal center */
+  transform: translate(-50%, -50%); /* Shift the image center into view */
+  min-width: 100%;      /* Ensure the image fills the width */
+  min-height: 100%;     /* Ensure the image fills the height */
+  object-fit: cover;    /* Crop to fill container */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+
+
+.content {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #27DDF5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #27DDF5;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f2f2f2;
+  font-size: 0.9rem;
+}

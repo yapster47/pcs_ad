@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightClean - Professional Cleaning Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header><center>
+    <h1>Professional Cleaning Solutions</h1>
+    <p>Making Your Home Sparkle</p>
+  </header></center>
+  
+
+  <section class="carousel">
+    <img src="images/bed1_from_front.jpg" class="carousel-image active" alt="Clean house image 1">
+    <img src="images/bed1_nightstand.jpg" class="carousel-image" alt="Clean house image 2">
+    <img src="images/master_bath.jpg" class="carousel-image" alt="Clean house image 3">
+    <img src="images/living_from_NE_corner.jpg" class="carousel-image" alt="Clean house image 4">
+    <img src="images/living_from_door.jpg" class="carousel-image" alt="Clean house image 5">
+    <img src="images/kitchen_from_living.jpg" class="carousel-image" alt="Clean house image 6">
+    <img src="images/kitchen_from_laundry.jpg" class="carousel-image" alt="Clean house image 7">
+    <img src="images/bed1_panoramic.jpg" class="carousel-image" alt="Clean house image 8">
+    <img src="images/bed2_from_front.jpg" class="carousel-image" alt="Clean house image 9">
+    <img src="images/dining.jpg" class="carousel-image" alt="Clean house image 10">
+  </section>
+
+  <section class="content">
+    <h2>Get a Free Quote</h2>
+    <p>Fill out the form below and we'll get back to you quickly.</p>
+
+    <!-- Replace with your Un-static.com form endpoint -->
+    <form action="https://un-static.com/your-form-endpoint" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number">
+      <textarea name="message" placeholder="Tell us about your cleaning needs"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BrightClean. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
