@@ -1,0 +1,60 @@
+<head>
+  <style>
+    /* A container for the three sections using Flexbox */
+    .gallery-container {
+      display: flex;
+      justify-content: space-between; /* Creates even space between items */
+      gap: 20px; /* Adds a consistent gap between sections */
+      padding: 20px;
+    }
+
+    /* Style for each individual section */
+    .gallery-item {
+      display: flex;
+      flex-direction: column; /* Stacks the image and text vertically */
+      align-items: center; /* Centers the content within each section */
+      text-align: center;
+      flex: 1; /* Makes each section grow to occupy equal space */
+    }
+
+    /* Style for the image */
+    .gallery-item img {
+      max-width: 100%; /* Ensures the image fits within its section */
+      height: auto;
+      border-radius: 8px; /* Optional: for rounded corners */
+    }
+
+    /* Style for the descriptor */
+    .gallery-item figcaption {
+      margin-top: 10px;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Add this to your <body> where you want the sections to appear -->
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <figure>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 1" />
+        <figcaption>A description of the first image goes here.</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-item">
+      <figure>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 2" />
+        <figcaption>This is the caption for the second picture.</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-item">
+      <figure>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 3" />
+        <figcaption>The final image and its detailed descriptor.</figcaption>
+      </figure>
+    </div>
+  </div>
+</body>

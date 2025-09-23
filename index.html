@@ -5,12 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional Cleaning Solutions of NWA</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* A container for the three sections using Flexbox */
+    .gallery-container {
+      display: flex;
+      justify-content: space-between; /* Creates even space between items */
+      gap: 20px; /* Adds a consistent gap between sections */
+      padding: 20px;
+    }
+
+    /* Style for each individual section */
+    .gallery-item {
+      display: flex;
+      flex-direction: column; /* Stacks the image and text vertically */
+      align-items: center; /* Centers the content within each section */
+      text-align: center;
+      flex: 1; /* Makes each section grow to occupy equal space */
+    }
+
+    
+
+     /* A separate container for the image to apply the aspect-ratio and overflow */
+    .image-wrapper {
+      width: 300px;
+      height: 400px;
+      overflow: hidden; /* This correctly hides only the overflowing image content */
+      border-radius: 8px; /* For rounded corners */
+      margin-bottom: 10px; /* Separates the image from the caption */
+    }
+
+    .gallery-item img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover; /* Crops the image to fill the 3:4 container */
+    }
+
+    
+
+    /* Style for the descriptor */
+    .gallery-item figcaption {
+      margin-top: 10px;
+      font-family: 
+      color: #000066;
+      font-size:1.4em;
+      text-align: left;
+      width: 100%;
+    }
+  </style>
+
+
 </head>
 <body>
 
   <header><center>
     <h1>Professional Cleaning Solutions of Northwest Arkansas</h1>
-    <p><h3>Making Your Home Sparkle</h3></p>
+    
   </header></center>
   
 
@@ -27,9 +77,58 @@
     <img src="images/dining.jpg" class="carousel-image" alt="Clean house image 10">
   </section>
 
+<h1>
+<center>We provide a variety of full-service cleaning solutions to make your home or business sparkle.  </center>
+
+</h1>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <figure>
+        <img src="images/bed1_nightstand.jpg" alt="Short-Term Rental Turnovers" />
+        <figcaption>Short-term rentals (Airbnb/VRBO) cleanings. </figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-item">
+      <figure>
+        <img src="images/modern-minimalist-office.jpg" alt="Placeholder Image 2" />
+        <figcaption>Commercial Spaces.</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-item">
+      <figure>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 3" />
+        <figcaption>What else do you want here?</figcaption>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <!-- New "Who we Are" section -->
+  <div class="who-we-are-container">
+    <div class="owner-photo-column">
+      <img src="https://via.placeholder.com/400" alt="Owner's Photo" class="owner-photo" />
+    </div>
+    <div class="owner-description-column">
+      <h1>About Professional Cleaning Solutions</h1>
+      <p>
+        Cheridyth is the passionate founder of this company. With over
+        20 years of experience in the cleaning industry, she started this
+        business with a simple mission: exceed customer expenctations.
+      </p>
+      <p>
+	(more about Cheridyth here)
+      </p>
+    </div>
+  </div>
+
+  
   <section class="content">
     <h2>Get a Free Estimate</h2>
-    <p>Fill out the form below and we'll get back to you quickly. Your information is safe: we do not share any of your information to any third parties and we
+    <p>Contact us to discuss how we can help you. Your information is safe: we do not share any of your information to any third parties and we
     will not send you any marketing messages.</p>
 
     <!-- Replace with your Un-static.com form endpoint -->
