@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: "Arial";
+  background-color: #fdfdfd;
+  color: #333;
+  text-align: center;
+}
+
+h1 {font-family: "Garamond", cursive;
+}
+h3{font-family:"Garamond", cursive;}
+
+header {
+  background: gray;
+  color: white;
+  padding: 1.5rem;
+}
+
+.carousel {
+  position: relative;
+  height: 750px;        /* Adjust for your preferred height */
+  overflow: hidden;
+  background: #000;     /* Optional: black background behind images */
+}
+
+.carousel-image {
+  position: absolute;
+  top: 50%;             /* Start at the vertical center */
+  left: 50%;            /* Start at the horizontal center */
+  transform: translate(-50%, -50%); /* Shift the image center into view */
+  min-width: 100%;      /* Ensure the image fills the width */
+  min-height: 100%;     /* Ensure the image fills the height */
+  object-fit: cover;    /* Crop to fill container */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+
+
+.content {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #1DAD9C;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1DAD9C;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f2f2f2;
+  font-size: 0.9rem;
+}
+
+/* --- Gallery Styles --- */
+
+    /* A container for the three sections using Flexbox */
+    .gallery-container {
+      display: flex;
+      justify-content: space-between; /* Creates even space between items */
+      gap: 20px; /* Adds a consistent gap between sections */
+      padding: 20px;
+    }
+
+    /* Style for each individual section */
+    .gallery-item {
+      display: flex;
+      flex-direction: column; /* Stacks the image and text vertically */
+      align-items: center; /* Centers the content within each section */
+      text-align: center;
+      flex: 1; /* Makes each section grow to occupy equal space */
+    }
+
+    
+
+     /* A separate container for the image to apply the aspect-ratio and overflow */
+    .image-wrapper {
+      width: 300px;
+      height: 400px;
+      overflow: hidden; /* This correctly hides only the overflowing image content */
+      border-radius: 8px; /* For rounded corners */
+      margin-bottom: 10px; /* Separates the image from the caption */
+    }
+
+    .gallery-item img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover; /* Crops the image to fill the 3:4 container */
+    }
+
+    
+
+    /* Style for the descriptor */
+    .gallery-item figcaption {
+      margin-top: 10px;
+      font-family: "Garamond", cursive;
+      color:  #1DAD9C;
+      font-size:1.4em;
+      text-align: left;
+      width: 100%;
+    }
+ 
+  /* --- Who We Are Styles --- */
+  .who-we-are-container {
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    gap: 40px; /* Space between the image and text */
+    padding: 40px;
+    background-color:  #1DAD9C; /* Optional: adds a light background */
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 40px auto; /* Centers the section with a top/bottom margin */
+    color: white; /* Ensure text is readable against the background */
+  }
+
+  .owner-photo-column {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+  }
+
+  .owner-photo {
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 50%; /* Creates a circular image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a soft shadow */
+  }
+
+  .owner-description-column {
+    flex-grow: 1; /* Allows this column to take up remaining space */
+  }
+
+  .owner-description-column h1,
+  .owner-description-column h2 { /* Targeting both H1 in HTML and H2 placeholder */
+    font-family: sans-serif;
+    color: white; /* Changed color for contrast with container background */
+    margin-top: 0;
+  }
+
+  .owner-description-column p {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: white;
+  }
+
+/* -------------------------------------- */
+/* --- Mobile Optimization via Media Queries --- */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+  /* General Adjustments */
+  h1 {
+    font-size: 1.5rem; /* Reduce main header size */
+    padding: 0 10px; /* Add some horizontal padding */
+  }
+  
+  .carousel {
+    height: 450px; /* Reduce the carousel height on mobile */
+  }
+
+  .content {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  /* Gallery Section Stacking */
+  .gallery-container {
+    flex-direction: column; /* Stack gallery items vertically */
+    padding: 10px;
+    gap: 40px; /* Increase gap between stacked items */
+  }
+
+  /* Gallery Image Size Adjustment */
+  .image-wrapper, 
+  .gallery-item img {
+    width: 80vw; /* Make images take up 80% of the viewport width */
+    height: auto; /* Allow height to adjust proportionally */
+    max-width: 300px; /* Keep max-width reasonable */
+  }
+
+  /* Who We Are Section Stacking (Existing and improved) */
+  .who-we-are-container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Reduce padding */
+    margin: 20px auto;
+  }
+  .owner-photo {
+    margin-bottom: 20px; /* Add space below the photo */
+  }
+
+  /* Ensure the form area also adheres to the reduced max-width */
+  .content {
+    max-width: 90%;
+  }
+
+}
