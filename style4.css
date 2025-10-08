@@ -1,0 +1,298 @@
+/* -------------------------------------- */
+/* --- Consistent and Elegant Base Styles --- */
+/* -------------------------------------- */
+
+/* Defined a clean, elegant sans-serif font stack */
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  text-align: center;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Consistent, modern heading style */
+h1, h2, h3 {
+  font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600; /* Slightly bolder for impact */
+  color: #1DAD9C; /* Primary color for all main headings */
+  margin-top: 0;
+}
+
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem; margin-bottom: 1.5rem;}
+h3 {font-size: 1.5rem;}
+
+.tagline {
+  color: #555; /* Secondary color for taglines */
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+header {
+  background: #1DAD9C;
+  color: white;
+  padding: 1.5rem;
+}
+
+header h1 {
+    color: white; /* Ensure header text is white */
+}
+
+/* --- Carousel Styles --- */
+.carousel {
+  position: relative;
+  height: 750px;
+  overflow: hidden;
+  background: #000;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* --- Gallery Styles --- */
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px; /* Increased top/bottom padding */
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.image-wrapper { /* Unused in new HTML, keeping for potential use */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gallery-item img {
+  width: 100%; /* Changed to 100% of flex container */
+  height: 250px; /* Set a fixed height for consistency */
+  max-width: 300px; /* Capping the max size */
+  object-fit: cover;
+  border-radius: 8px; /* Apply to the image directly */
+}
+
+.gallery-item figcaption {
+  margin-top: 10px;
+  font-family: inherit; /* Use body font */
+  color: #333; /* Darker text for readability */
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center; /* Center caption on desktop */
+  width: 100%;
+}
+
+/* --- About/Who We Are Styles --- */
+.who-we-are-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f7f7f7; /* Lighter background for less intensity */
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.owner-photo-column {
+  flex-shrink: 0;
+}
+
+.owner-photo {
+  width: 200px; /* Slightly reduced size */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #1DAD9C; /* Added a border in the primary color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.owner-description-column {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.owner-description-column h2 {
+  color: #1DAD9C;
+  margin-top: 0;
+}
+
+.owner-description-column p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Testimonials Section Styles (New) --- */
+.testimonials-section {
+    background-color: #e6f7f5; /* Very light teal background */
+    padding: 40px 20px;
+}
+
+.testimonials-section .content {
+    max-width: 1000px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for testimonials */
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #1DAD9C; /* Elegant accent line */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .source {
+    font-weight: 600;
+    color: #1DAD9C;
+    text-align: right;
+}
+
+/* --- Form and Footer Styles --- */
+.content {
+  padding: 4rem 2rem; /* Increased vertical padding */
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Increased gap */
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Added subtle border */
+  border-radius: 4px;
+}
+
+button {
+  background: #1DAD9C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #179383; /* Slightly darker shade on hover */
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f2f2f2;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px auto;
+    width: 80%;
+}
+
+
+/* -------------------------------------- */
+/* --- Mobile Optimization (Responsive) --- */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+  /* General Adjustments */
+  h1 {
+    font-size: 1.75rem; /* Reduced main header size */
+    padding: 0 10px;
+  }
+  
+  .tagline {
+      font-size: 1.2rem;
+  }
+  
+  .carousel {
+    height: 400px; /* Reduced the carousel height on mobile */
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  /* Gallery Section Stacking */
+  .gallery-container {
+    flex-direction: column; /* Stack gallery items vertically */
+    padding: 20px;
+    gap: 30px;
+  }
+
+  /* Gallery Image Size Adjustment */
+  .gallery-item img {
+    width: 80vw; /* Make images take up 80% of the viewport width */
+    height: 300px; /* Adjusted fixed height for mobile */
+    max-width: 400px;
+  }
+  
+  /* Testimonials Stacking */
+  .testimonials-grid {
+    grid-template-columns: 1fr; /* Stack testimonials vertically on mobile */
+  }
+
+  /* Who We Are Section Stacking */
+  .who-we-are-container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .owner-photo {
+    margin-bottom: 20px;
+  }
+  
+  .owner-description-column {
+      text-align: center; /* Center-align text when stacked */
+  }
+  
+  /* Ensure the form area also adheres to the reduced max-width */
+  .content {
+    max-width: 90%;
+  }
+
+}
